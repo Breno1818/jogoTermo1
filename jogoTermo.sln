@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TermoLib", "TermoLib\TermoLib.csproj", "{0F1CB517-B963-4F1C-B3F9-8FE95B119F53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TermoTest", "TermoTest\TermoTest.csproj", "{E20AC6B8-F95B-4D42-AE81-28D0316D004C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TermoApp", "TermoApp\TermoApp.csproj", "{579D2CD4-B31F-47A3-9EB9-07EAE78A5D19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F1CB517-B963-4F1C-B3F9-8FE95B119F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F1CB517-B963-4F1C-B3F9-8FE95B119F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F1CB517-B963-4F1C-B3F9-8FE95B119F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F1CB517-B963-4F1C-B3F9-8FE95B119F53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E20AC6B8-F95B-4D42-AE81-28D0316D004C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E20AC6B8-F95B-4D42-AE81-28D0316D004C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E20AC6B8-F95B-4D42-AE81-28D0316D004C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E20AC6B8-F95B-4D42-AE81-28D0316D004C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{579D2CD4-B31F-47A3-9EB9-07EAE78A5D19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{579D2CD4-B31F-47A3-9EB9-07EAE78A5D19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{579D2CD4-B31F-47A3-9EB9-07EAE78A5D19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{579D2CD4-B31F-47A3-9EB9-07EAE78A5D19}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5AF194A5-34F2-4CF4-8DCF-27C811F73ED3}
+	EndGlobalSection
+EndGlobal
