@@ -87,53 +87,19 @@ namespace TermoApp
                 palavra += botao.Text;
             }
 
-            if (palavra.Length < 5)
-                return;
-
             try
             {
                 termo.ChecaPalavra(palavra);
                 AtualizaTabuleiro();
-
-                bool ganhou = true;
-                for (int i = 0; i < 5; i++)
-                {
-                    if (termo.tabuleiro[termo.palavraAtual - 2][i].Cor != 'V')
-                    {
-                        ganhou = false;
-                        break;
-                    }
-                }
-
-                if (ganhou)
-                {
-                    MessageBox.Show("🎉 Você conseguiu parabéns", "Vencedor");
-                    foreach (Control c in groupBox2.Controls)
-                        if (c is Button b) b.Enabled = false;
-                    return;
-                }
-
                 coluna = 1;
                 this.ActiveControl = null;
                 this.Focus();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Palavra Inválida", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                for (int i = 1; i <= 5; i++)
-                {
-                    var nomeBotao = $"btn{termo.palavraAtual}{i}";
-                    var botao = RetornaBotao(nomeBotao);
-                    botao.Text = "";
-                }
-
-                coluna = 1;
-                this.ActiveControl = null;
-                this.Focus();
+                MessageBox.Show(ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
 
         private void btnBackspace_Click(object sender, EventArgs e)
         {
@@ -178,44 +144,5 @@ namespace TermoApp
                 }
             }
         }
-
-        private void Resetbtn_Click(object sender, EventArgs e)
-        {
-
-            // 1️⃣ Reset all letter buttons (inside groupBox1)
-            foreach (Control ctrl in groupBox1.Controls)
-            {
-                if (ctrl is Button btn)
-                {
-                    btn.Text = ""; // Clear the letter
-                    btn.BackColor = SystemColors.ActiveBorder; // Restore default color (same as design)
-                    btn.Enabled = true;
-                }
-            }
-
-            // 2️⃣ Reset all keyboard buttons (inside groupBox2)
-            foreach (Control ctrl in groupBox2.Controls)
-            {
-                if (ctrl is Button btn)
-                {
-                    // Skip Enter and Backspace — they don’t need reset colors/text
-                    if (btn.Name == "btnEnter" || btn.Name == "btnBackspace")
-                        continue;
-
-                    btn.BackColor = SystemColors.ActiveBorder;
-                    btn.Enabled = true;
-                }
-            }
-
-            // 3️⃣ Recreate the game logic object and reset input position
-            termo = new Termo();
-            coluna = 1;
-
-            // 4️⃣ Return focus to the form for keyboard shortcuts
-            this.ActiveControl = null;
-            this.Focus();
-        }
-
-
     }
 }
